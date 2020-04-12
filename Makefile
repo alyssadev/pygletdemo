@@ -1,15 +1,15 @@
-dist/glcube.app:
-	pyinstaller --hidden-import pkg_resources.py2_warn -w glcube.py
+dist/demo.app:
+	pyinstaller --hidden-import pkg_resources.py2_warn -w demo.py
 
-dist/glcube:
-	pyinstaller --hidden-import pkg_resources.py2_warn -F -w glcube.py
+dist/demo:
+	pyinstaller --hidden-import pkg_resources.py2_warn -F -w demo.py
 
-dist/glcube.exe:
-	pyinstaller -w -F glcube.py
+dist/demo.exe:
+	pyinstaller -w -F demo.py
 
-windows: clean dist/glcube.exe
-macos: clean dist/glcube.app
-linux: clean dist/glcube
+windows: clean dist/demo.exe
+macos: clean dist/demo.app
+linux: clean dist/demo
 
 clean:
 	rm -rf ./__pycache__ ./build ./dist ./*.spec
